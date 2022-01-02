@@ -18,3 +18,61 @@
     border: 5px solid brown;
     border-radius: 25px;
 }
+
+.options{
+    text-align: center;
+}
+
+.Rock{
+    font-size: 2.5rem;
+    background-color: green;
+    border-radius: 10%;
+    margin: 10px 20px;
+}
+
+.Paper{
+    font-size: 2.5rem;
+    background-color: green;
+    border-radius: 10%;
+    margin: 10px 20px;
+}
+
+.Scizzors{
+    font-size: 2.5rem;
+    background-color: green;
+    border-radius: 10%;
+    margin: 10px 20px;
+}
+
+.Lizard{
+    font-size: 2.5rem;
+    background-color: green;
+    border-radius: 10%;
+    margin: 10px 20px;
+}
+
+.Spock{
+    font-size: 2.5rem;
+    background-color: green;
+    border-radius: 10%;
+    margin: 10px 20px;
+}
+
+.difficulty-area {
+    text-align: center;
+}
+
+.increase {
+    font-size: 1.5rem;
+    margin: 10px 20px;
+}
+
+.decrease {
+    font-size: 1.5rem;
+    margin: 10px 20px;
+}
+
+#level { 
+    font-size: x-large;
+    margin: 10px 20px;
+}
