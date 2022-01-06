@@ -57,22 +57,3 @@
     border-radius: 10%;
     margin: 10px 20px;
 }
-
-.difficulty-area {
-    text-align: center;
-}
-
-.increase {
-    font-size: 1.5rem;
-    margin: 10px 20px;
-}
-
-.decrease {
-    font-size: 1.5rem;
-    margin: 10px 20px;
-}
-
-#level { 
-    font-size: x-large;
-    margin: 10px 20px;
-}
