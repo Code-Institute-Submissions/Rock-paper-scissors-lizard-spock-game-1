@@ -23,35 +23,35 @@
     text-align: center;
 }
 
-.Rock{
+#Rock{
     font-size: 2.5rem;
     background-color: green;
     border-radius: 10%;
     margin: 10px 20px;
 }
 
-.Paper{
+#Paper{
     font-size: 2.5rem;
     background-color: green;
     border-radius: 10%;
     margin: 10px 20px;
 }
 
-.Scizzors{
+#Scizzors{
     font-size: 2.5rem;
     background-color: green;
     border-radius: 10%;
     margin: 10px 20px;
 }
 
-.Lizard{
+#Lizard{
     font-size: 2.5rem;
     background-color: green;
     border-radius: 10%;
     margin: 10px 20px;
 }
 
-.Spock{
+#Spock{
     font-size: 2.5rem;
     background-color: green;
     border-radius: 10%;

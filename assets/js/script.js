@@ -1,16 +1,14 @@
-const buttons = document.getElementsByClassName("buttons");
-const playerScore = document.getElementByClassName("player-score");
-const computerScore = document.getElementByClassName("comp-score");
+const buttons = document.querySelectorAll("button");
+const playerScore = document.getElementsByClassName("player-score");
+const computerScore = document.getElementsByClassName("comp-score");
 const messages = document.getElementById("info");
-const choices = ["rock","paper","scizzors","lizard","spock"]
 let compchoice
+let playerChoice
 
-for (let button of buttons);{
-    button.addEventListener("click",function(){
-        let playerChoice = this.getAttribute("data-choice");
-        playGame(playerChoice);
-    });
-}
+buttons.forEach(button => button.addEventListener('click', (e) => {
+    playerChoice = e.target.id
+    messages.innerHTML = playerChoice
+}))
 
 function compChoice() {
     let rand = Math.random()
@@ -22,7 +20,7 @@ function compChoice() {
         compChoice = "rock"
     } else if (rand <= 0.8){
         compChoice = "lizard"
-    } else if (rand > 0.8) {
+    } else {
         compChoice = "spock"
     }  
 }
@@ -32,4 +30,7 @@ function playGame(playerChoice) {
     let result = checkWinner(choices[compChoice],choices[playerChoice]);
 
     updateScores(result);
+
+    console.log(playerChoice)
 }
+
