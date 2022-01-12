@@ -2,77 +2,76 @@ const buttons = document.querySelectorAll("button");
 const playerScore = document.getElementsByClassName("player-score");
 const computerScore = document.getElementsByClassName("comp-score");
 const messages = document.getElementById("info");
-let compchoice
-let playerChoice
-let message
+let compchoice;
+let playerChoice;
+let message;
 
 buttons.forEach(button => button.addEventListener('click', (e) => {
-    playerChoice = e.target.id
-    compChoice()
-    result()
-}))
+    playerChoice = e.target.id;
+    cpChoice();
+    result();
+}));
 
-function compChoice() {
-    const rand = Math.random()
+function cpChoice() {
+    const rand = Math.random();
     if (rand <=0.2){
-        compChoice = "scizzors"
+        compChoice = "scizzors";
     } else if (rand <= 0.4){
-        compChoice = "paper"
+        compChoice = "paper";
     } else if (rand <= 0.6){
-        compChoice = "rock"
+        compChoice = "rock";
     } else if (rand <= 0.8){
-        compChoice = "lizard"
+        compChoice = "lizard";
     } else {
-        compChoice = "spock"
+        compChoice = "spock";
     } 
-    console.log(compChoice) 
 }
 
 function result() {  
     if (compChoice === playerChoice){
-        message = "Its a draw"
+        message = "Its a draw";
     } else if(playerChoice === "Spock" && compChoice === "scizzors"){
-        message = "spock beats scizzors you win"
+        message = "spock beats scizzors you win";
     } else if(playerChoice === "Spock" && compChoice === "rock"){
-        message = "spock beats rock you win"
+        message = "spock beats rock you win";
     } else if(playerChoice === "Scizzors" && compChoice === "lizard"){
-        message = "scizzors beats lizard you win"
+        message = "scizzors beats lizard you win";
     } else if(playerChoice === "Scizzors" && compChoice === "paper"){
-        message = "scizzors beats paper you win"
+        message = "scizzors beats paper you win";
     } else if(playerChoice === "Paper" && compChoice === "rock"){
-        message = "paper beats rock you win"
+        message = "paper beats rock you win";
     } else if(playerChoice === "Paper" && compChoice === "spock"){
-        messages = "paper beats spock you win"
+        message = "paper beats spock you win";
     } else if(playerChoice === "Rock" && compChoice === "spock"){
-        message = "rock beats lizard you win"
+        message = "rock beats lizard you win";
     } else if(playerChoice === "Rock" && compChoice === "scizzors"){
-        message = "rock beats scizzors you win"
+        message = "rock beats scizzors you win";
     } else if(playerChoice === "Lizard" && compChoice === "spock"){
-        message = "lizard beats spock you win"
+        message = "lizard beats spock you win";
     } else if(playerChoice ==="Lizard" && compChoice === "paper" ){
-        message = "lizard beats paper you win"
+        message = "lizard beats paper you win";
     } else if(compChoice === "spock" && playerChoice === "Scizzors"){
-        message = "spock beats scizzors you lose"
+        message = "spock beats scizzors you lose";
     } else if(compChoice === "spock" && playerChoice === "Rock"){
-        message = "spock beats rock you lose"
+        message = "spock beats rock you lose";
     } else if(compChoice === "scizzors" && playerChoice === "Lizard"){
-        message = "scizzors beats lizard you lose"
+        message = "scizzors beats lizard you lose";
     } else if(compChoice === "scizzors" && playerChoice === "Paper"){
-        message = "scizzors beats paper you lose"
+        message = "scizzors beats paper you lose";
     } else if(compChoice === "paper" && playerChoice === "Rock"){
-        message = "paper beats rock you lose"
+        message = "paper beats rock you lose";
     } else if(compChoice === "paper" && playerChoice === "Spock"){
-        messages = "paper beats spock you lose"
+        message = "paper beats spock you lose";
     } else if(compChoice === "rock" && playerChoice === "Spock"){
-        message = "rock beats lizard you lose"
+        message = "rock beats lizard you lose";
     } else if(compChoice === "rock" && playerChoice === "Scizzors"){
-        message = "rock beats scizzors you lose"
+        message = "rock beats scizzors you lose";
     } else if(compChoice === "lizard" && playerChoice === "Spock"){
-        message = "lizard beats spock you lose"
+        message = "lizard beats spock you lose";
     } else if(compChoice ==="lizard" && playerChoice === "paper" ){
-        message = "lizard beats paper you lose"
+        message = "lizard beats paper you lose";
     }
 
-    messages.innerHTML = message
+    messages.innerHTML = message;
 }
 
