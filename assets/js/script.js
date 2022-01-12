@@ -4,11 +4,12 @@ const computerScore = document.getElementsByClassName("comp-score");
 const messages = document.getElementById("info");
 let compchoice
 let playerChoice
+let message
 
 buttons.forEach(button => button.addEventListener('click', (e) => {
     playerChoice = e.target.id
-    messages.innerHTML = playerChoice
     compChoice()
+    result()
 }))
 
 function compChoice() {
@@ -23,32 +24,35 @@ function compChoice() {
         compChoice = "lizard"
     } else {
         compChoice = "spock"
-    }  
+    } 
+    console.log(compChoice) 
 }
 
 function result() {  
     if (compChoice === playerChoice){
-        messages.innerText = "Its a draw"
+        message = "Its a draw"
     } else if(playerChoice === "Spock" && compChoice === "scizzors"){
-        messages.innerText = "spock beats scizzors you win"
+        message = "spock beats scizzors you win"
     } else if(playerChoice === "Spock" && compChoice === "rock"){
-        messages.innerText = "spock beats rock you win"
+        message = "spock beats rock you win"
     } else if(playerChoice === "Scizzors" && compChoice === "lizard"){
-        messages.innerText = "scizzors beats lizard you win"
+        message = "scizzors beats lizard you win"
     } else if(playerChoice === "Scizzors" && compChoice === "paper"){
-        messages.innerText = "scizzors beats paper you win"
+        message = "scizzors beats paper you win"
     } else if(playerChoice === "Paper" && compChoice === "rock"){
-        messages.innerText = "paper beats rock you win"
+        message = "paper beats rock you win"
     } else if(playerChoice === "Paper" && compChoice === "spock"){
-        messages.innerText = "paper beats spock you win"
+        messages = "paper beats spock you win"
     } else if(playerChoice === "Rock" && compChoice === "spock"){
-        messages.innerText = "rock beats lizard you win"
+        message = "rock beats lizard you win"
     } else if(playerChoice === "Rock" && compChoice === "scizzors"){
-        messages.innerText = "rock beats scizzors you win"
+        message = "rock beats scizzors you win"
     } else if(playerChoice === "Lizard" && compChoice === "spock"){
-        messages.innerText = "lizard beats spock you win"
+        message = "lizard beats spock you win"
     } else if(playerChoice ==="Lizard" && compChoice === "paper" ){
-        messages.innerText = "lizard beats paper you win"
+        message = "lizard beats paper you win"
     }
+
+    messages.innerHTML = message
 }
 
