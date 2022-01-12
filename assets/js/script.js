@@ -51,6 +51,8 @@ function result() {
         message = "lizard beats spock you win"
     } else if(playerChoice ==="Lizard" && compChoice === "paper" ){
         message = "lizard beats paper you win"
+    } else{
+        
     }
 
     messages.innerHTML = message
