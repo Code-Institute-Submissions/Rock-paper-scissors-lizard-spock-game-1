@@ -51,8 +51,26 @@ function result() {
         message = "lizard beats spock you win"
     } else if(playerChoice ==="Lizard" && compChoice === "paper" ){
         message = "lizard beats paper you win"
-    } else{
-        
+    } else if(compChoice === "spock" && playerChoice === "Scizzors"){
+        message = "spock beats scizzors you lose"
+    } else if(compChoice === "spock" && playerChoice === "Rock"){
+        message = "spock beats rock you lose"
+    } else if(compChoice === "scizzors" && playerChoice === "Lizard"){
+        message = "scizzors beats lizard you lose"
+    } else if(compChoice === "scizzors" && playerChoice === "Paper"){
+        message = "scizzors beats paper you lose"
+    } else if(compChoice === "paper" && playerChoice === "Rock"){
+        message = "paper beats rock you lose"
+    } else if(compChoice === "paper" && playerChoice === "Spock"){
+        messages = "paper beats spock you lose"
+    } else if(compChoice === "rock" && playerChoice === "Spock"){
+        message = "rock beats lizard you lose"
+    } else if(compChoice === "rock" && playerChoice === "Scizzors"){
+        message = "rock beats scizzors you lose"
+    } else if(compChoice === "lizard" && playerChoice === "Spock"){
+        message = "lizard beats spock you lose"
+    } else if(compChoice ==="lizard" && playerChoice === "paper" ){
+        message = "lizard beats paper you lose"
     }
 
     messages.innerHTML = message
