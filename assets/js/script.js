@@ -2,33 +2,41 @@ const buttons = document.querySelectorAll("button");
 const playerScore = document.getElementsByClassName("player-score");
 const computerScore = document.getElementsByClassName("comp-score");
 const messages = document.getElementById("info");
-let compchoice;
+let compChoice;
 let playerChoice;
 let message;
 
 buttons.forEach(button => button.addEventListener('click', (e) => {
-    playerChoice = e.target.id;
+    playerChoice = button.id;
+    console.log(playerChoice)
     cpChoice();
+    console.log(compChoice)
     result();
 }));
 
 function cpChoice() {
     const rand = Math.random();
     if (rand <=0.2){
+        console.log('did I get here',rand)
         compChoice = "scizzors";
     } else if (rand <= 0.4){
+        console.log('did I get here',rand)
         compChoice = "paper";
     } else if (rand <= 0.6){
+        console.log('did I get here',rand)
         compChoice = "rock";
     } else if (rand <= 0.8){
+        console.log('did I get here',rand)
         compChoice = "lizard";
     } else {
+        console.log('did I get here',rand)
         compChoice = "spock";
     } 
+    console.log(compChoice)
 }
 
 function result() {  
-    if (compChoice === playerChoice){
+    if (compChoice.toLowerCase() === playerChoice.toLowerCase()){
         message = "Its a draw";
     } else if(playerChoice === "Spock" && compChoice === "scizzors"){
         message = "spock beats scizzors you win";
