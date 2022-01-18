@@ -81,6 +81,9 @@ Here is the live link: https://kylo74.github.io/Rock-paper-scissors-lizard-spock
 
 - I used the following tutorial to help me with the javascript: https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=1136s
 
+Here is the code that was made with the help of a tutorial
+![Code](assets/images/code.png)
+
 ### Content
 
 - I got the icons for the different hand signs from https://fontawesome.com/
